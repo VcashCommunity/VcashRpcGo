@@ -1,12 +1,12 @@
 # VcashRpcGo
 
-Go Library for Vcash rpc commands
+Go library for Vcash rpc commands
 
 Need running Vcash daemon, if you don't know what's it, do not use this library
 
 Usage example:
 
-`response := rpc_getinfo()`
+`response := RpcGetInfo()`
 
 ## Create standalone exe files
 ### i386
