@@ -3,22 +3,22 @@ package main
 import (
 	"fmt"
 	"time"
-	_ "github.com/devmahno/vcashrpcgo"
+	xvc "github.com/devmahno/vcashrpcgo"
 )
 
 func main() {
 	fmt.Printf("\n* Call rpc getinfo\n")
-	show_data(RpcGetinfo())
+	show_data(xvc.RpcGetInfo())
 
 	fmt.Printf("\n* Call rpc getbalance\n")
-	show_data(RpcGetbalance())
+	show_data(xvc.RpcGetBalance())
 
-	//show_data(rpc_listtransactions("*", "10", "0"))
+	//show_data(xvc.RpcListTransactions("*", "10", "0"))
 
 	start := time.Now()
 
 	fmt.Printf("* check_received \n")
-	fmt.Printf("%+v\n", CheckReceived("SOME_XVC_ADDRESS"))
+	fmt.Printf("%+v\n", xvc.CheckReceived("SOME_XVC_ADDRESS"))
 
 	elapsed := time.Since(start)
 	fmt.Printf("check_received took %s\n", elapsed)
@@ -41,7 +41,7 @@ func main() {
 	//	for t := range ticker.C {
 	//		fmt.Println("Tick at", t)
 	//		fmt.Printf("* getdifficulty \n")
-	//		show_data(rpc_getdifficulty())
+	//		show_data(xvc.RpcGetDifficulty())
 	//		fmt.Printf("\n")
 	//	}
 	//}()

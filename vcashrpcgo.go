@@ -32,7 +32,7 @@ func RpcGetInfo() map[string]interface{} {
 	return map_res
 }
 
-func RpcGetbalance() map[string]interface{} {
+func RpcGetBalance() map[string]interface{} {
 	// getbalance
 	params := []string{}
 	pay := RpcPayload{id: 1, method: "getbalance", params: params, url: "http://127.0.0.1:9195"}
