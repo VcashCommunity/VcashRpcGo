@@ -6,7 +6,7 @@ Go library for Vcash rpc commands
 To start using VcashRpcGo, install Go 1.8 or above and run `go get`:
 
 ```sh
-$ go get github.com/devmahno/vcashrpcgo
+$ go get -u github.com/devmahno/vcashrpcgo
 ```
 
 This will retrieve the library and install the `badger_info` command line
