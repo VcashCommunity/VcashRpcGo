@@ -119,8 +119,8 @@ func CheckReceived(address string) RpcCheckResponse {
 		// Check info about casting in golang
 		uu := u.(map[string]interface{})
 		if uu["address"] == address {
-			// Address found, get Amount
-			amount = uu["Amount"].(float64)
+			// Address found, get amount
+			amount = uu["amount"].(float64)
 			break
 		}
 	}
