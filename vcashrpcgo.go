@@ -48,6 +48,15 @@ func RpcGetNewAddress() map[string]interface{} {
 	return map_res
 }
 
+func RpcListSinceBlock(hash string) map[string]interface{} {
+	// listtransactions
+	// ex: listsinceblock 0000000000009fe250400eed6cb80ecf09cd90642b0a12019d097c60ac462dcb
+	params := []string{hash}
+	pay := RpcPayload{id: 1, method: "listsinceblock", params: params, url: "http://127.0.0.1:9195"}
+	map_res := callRpc(pay)
+	return map_res
+}
+
 func RpcListTransactions(account string, count string, from string) map[string]interface{} {
 	// listtransactions
 	// ex: account = *, count = 80, from = 0
